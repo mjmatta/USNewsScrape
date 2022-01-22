@@ -26,7 +26,7 @@ def get_rankings(URL, veteran):
     
     while no_pagedown:
         try:
-            button = browser.find_element_by_css_selector("button.button__ButtonStyled-sc-1vhaw8r-1.kaNkh.pager__ButtonStyled-sc-1i8e93j-1.geumwM.type-secondary.size-large")
+            button = browser.find_element_by_css_selector("button.button__ButtonStyled-sc-1vhaw8r-1.hVAJZM.pager__ButtonStyled-sc-1i8e93j-1.dypUdv.type-secondary.size-large")
             button.click()
         except:
             no_pagedown -=1
@@ -40,12 +40,12 @@ def get_rankings(URL, veteran):
     locs = []
     ranks = []
     
-    for college in soup.find_all("h2", class_="Heading__HeadingStyled-sc-1w5xk2o-0-h2 dEJsBF Heading-sc-1w5xk2o-1 kQuiLM"):
+    for college in soup.find_all("h2", class_="Heading__HeadingStyled-sc-1w5xk2o-0-h2 gZAQPK Heading-sc-1w5xk2o-1 cRrhAX"):
         names.append(college.find("a").text)
         links.append(college.find("a")['href'])
-    for loc in soup.find_all("p", class_="Paragraph-sc-1iyax29-0 deEihr"):
+    for loc in soup.find_all("p", class_="Paragraph-sc-1iyax29-0 cfmAlC"):
         locs.append(loc.text)
-    for rank in soup.find_all("p", class_="Paragraph-sc-1iyax29-0 DetailCardOnlineProgramsSearch__RankingParagraph-sc-6mcjcp-5 fEanbm dhMlmy"):
+    for rank in soup.find_all("p", class_="Paragraph-sc-1iyax29-0 DetailCardOnlineProgramsSearch__RankingParagraph-sc-6mcjcp-5 fsGyFj bTlJil"):
         r = ""
         for part in rank.find_all("span"):
             r += part.text
