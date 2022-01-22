@@ -7,5 +7,6 @@
 
 ## all-school-stats.py
 * In progress
+* Uses same ChromeDriver, path in line 20
 * Loops thru all CSVs (`get-all-rankings.py` must be ran before `all-school-stats.py`)
 * Provides school information in text file, with folder for each category
