@@ -12,10 +12,10 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-
 options = Options()
 options.add_argument("--disable-blink-features=AutomationControlled")
 
+#TODO: CHANGE CHROMEDRIVER PATH HERE
 browser = webdriver.Chrome('/Users/michaelmatta/Downloads/chromedriver', options=options)
 
 def get_rankings(URL, veteran):
